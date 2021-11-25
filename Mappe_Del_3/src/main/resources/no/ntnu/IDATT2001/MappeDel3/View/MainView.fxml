@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="no.ntnu.IDATT2001.MappeDel3.controllers.MainController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <BorderPane>
+            <top>
+                <VBox>
+                    <MenuBar prefWidth="600">
+                        <Menu text="File">
+                            <MenuItem text="Import Txt-file" onAction="#onImportTxt"/>
+                            <MenuItem text="Exit" onAction="#onExit"/>
+                        </Menu>
+                        <Menu text="Help">
+                            <MenuItem text="About" onAction="#onAbout"/>
+                        </Menu>
+                    </MenuBar>
+                </VBox>
+            </top>
+            <left>
+                <VBox styleClass="VBox">
+                    <TextField fx:id="searchBar" styleClass="text-field" promptText="Search here" onAction="#onSearch"/>
+                </VBox>
+            </left>
+        </BorderPane>
+    </top>
+    <center>
+        <TableView fx:id="zipCodeTable" styleClass="table-view">
+            <columns>
+                <TableColumn text="Postal Code" fx:id="postalCodeColumn" prefWidth="${zipCodeTable.width*0.25}" styleClass="table-column-cell" resizable="false"/>
+                <TableColumn text="Postal Place" fx:id="postalPlaceColumn" prefWidth="${zipCodeTable.width*0.25}" styleClass="table-column-cell" resizable="false"/>
+                <TableColumn text="Municipality Number" fx:id="municipalityNumberColumn" prefWidth="${zipCodeTable.width*0.25}" styleClass="table-column-cell" resizable="false"/>
+                <TableColumn text="Municipality Name" fx:id="municipalityNameColumn" prefWidth="${zipCodeTable.width*0.25}" styleClass="table-column-cell" resizable="false"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

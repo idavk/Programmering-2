@@ -1,0 +1,62 @@
+/*root style*/
+.root {
+    -fx-padding: 5px 5px;
+    -fx-alignment: center;
+    -primary-color: #0056b2;
+}
+
+/* Table view styles*/
+.table-view {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: grey;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 0px;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #E8E8E8;
+    -fx-padding: 0px;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: derive(-primary-color, 90%);
+    -fx-padding: 0px;
+}
+
+.table-row-cell:focused {
+    -fx-background-color: -primary-color;
+    -fx-padding: 0px;
+}
+
+.table-row-cell:focused > * > * {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+.table-view .table-column-cell{
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/*Text field style */
+.text-field {
+    -fx-padding: 5px 15px;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-text-alignment: center;
+    -fx-background-color: lightgrey;
+    -fx-border-color: grey;
+    -fx-prompt-text-fill: black;
+}
+
+/* Padding for VBox*/
+.VBox {
+    -fx-padding: 10px;
+}
